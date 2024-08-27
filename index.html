@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo_header" src="./assets/logo.png" alt="Imagen header">
+    </header>
+    <main class="encriptador">
+        <section class="encriptador__derecho">
+            <div class="encriptador__derecho__contenedor">
+                <input type="text" id= "textoUsuario" class="indicaciones" placeholder ="Ingrese el texto aqui">
+                <p class="indicaciones__encriptador_pie"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 20 20" data-icon="zondicons:exclamation-solid" class="iconify iconify--zondicons"><path fill="currentColor" d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z"><path fill="currentColor" d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z"></path></svg>   Solo letras minúsculas y sin acentos</p>
+            <div class="encriptador__botones">
+                    <button id="botonEncriptar" onclick = "encriptarTexto();" class="boton__encriptar">Encriptar</button>
+                    <button id="botonDesencriptar" onclick = "desencriptarTexto();" class="boton__desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="encriptador__izquierdo">
+            <div id="izquierdoMensaje" class="encriptador_izquierdo_mensaje">
+            <img id="encriptadorImagen" class="encriptador_izquierdo_imagen" src="./assets/muneco.png" alt="Imagen descriptiva">
+                <p class="encriptador__mensaje"> <strong>Ningún mensaje fue encontrado</strong></p>
+                <p class="encriptador__mensaje__indicacion">  Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea class="encriptador__mensaje__indicacion__salida" id="mensajeSalida"></textarea>
+            <div class="encriptador_mensaje_copiar" id="mensajeCopiar">
+                <button id="buttonCopy" onclick="copyToClipboard();" class="button_copy">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p> <strong>Desarrollado por Alexandra Cedillo Anzures</strong></p>
+    </footer>
+</body>
+    <script src="app.js"></script>
+</html>
